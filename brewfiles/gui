@@ -87,3 +87,5 @@ cask "wireshark-app"             # Network protocol analyzer.
 # Medical Imaging
 # ------------------------------------------------------------
 cask "horos"                     # DICOM medical image viewer.
+cask "itk-snap"                  # Segment structures in 3D medical images.
+
