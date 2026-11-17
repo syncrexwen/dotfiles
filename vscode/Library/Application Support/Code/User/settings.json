@@ -190,4 +190,8 @@
   "redhat.telemetry.enabled": true,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.unicodeHighlight.invisibleCharacters": false,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.html": "workbench.editor.browser",
+  },
 }
