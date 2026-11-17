@@ -42,6 +42,7 @@ brew "gnupg"                     # OpenPGP signing and encryption.
 brew "sqlite"                    # SQLite database CLI.
 brew "httpie"                    # Human-friendly HTTP client.
 brew "entr"                      # Run commands when files change.
+brew "pipx"                      # Execute binaries from Python packages in isolated environments.
 
 # ------------------------------------------------------------
 # Search, Code Analysis & Refactoring
