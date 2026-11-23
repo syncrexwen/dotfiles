@@ -90,3 +90,5 @@ brew "gnu-tar"                   # GNU tar implementation.
 brew "stow"                      # Symlink manager for dotfiles and config trees.
 brew "rsync"                     # Fast incremental file transfer tool.
 brew "sevenzip"                  # A file archiver with a high compression ratio.
+brew "resvg"                     # SVG rendering tool and library.
+
