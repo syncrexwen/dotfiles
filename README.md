@@ -130,6 +130,8 @@ nvim
   否则下载官方 v0.12.6 Linux x86_64 tarball，安装到用户目录，不覆盖系统包。
   官方二进制需要系统提供兼容的 glibc。
 - 同时安装 Git、C 编译工具、ripgrep、fd 和 tree-sitter CLI v0.27.2。
+- Bash 中先按 `Ctrl+X`，再按 `Ctrl+E`，可用 Neovim（没有则用 Vim）编辑当前命令。
+  保存退出后只回填命令行，不自动执行；确认后按 Enter 执行。重新登录或 `source ~/.bashrc` 后生效。
 - 配置使用官方 LazyVim starter。首次启动 `nvim` 时还需联网下载插件，完成后执行 `:LazyHealth`。
   具体语言的 LSP / 格式化器可在 `:Mason` 中按需安装，部分工具还需要 Node.js 等语言运行时。
 - 已有 `~/.config/nvim` 时保留原配置；若要切换到 LazyVim，先自行备份移走原配置。

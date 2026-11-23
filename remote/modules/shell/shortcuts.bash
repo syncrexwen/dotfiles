@@ -233,7 +233,37 @@ HISTTIMEFORMAT='%F %T '
 # 每条命令执行后立即写入历史，多个 tmux 窗格 / 终端之间不丢记录
 [[ $PROMPT_COMMAND == *"history -a"* ]] || PROMPT_COMMAND="history -a${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 
+# 在编辑器里修改当前命令，退出后回填输入行，仍需按 Enter 才执行。
+_edit_command_line() {
+    local editor tmp
+
+    if command -v nvim >/dev/null 2>&1; then
+        editor=nvim
+    elif command -v vim >/dev/null 2>&1; then
+        editor=vim
+    else
+        return 1
+    fi
+
+    tmp=$(mktemp) || return 1
+    if ! printf '%s\n' "$READLINE_LINE" > "$tmp"; then
+        command rm -f -- "$tmp"
+        return 1
+    fi
+
+    if "$editor" "$tmp"; then
+        # 直接读取文件，避开此文件中 cat -> bat 的别名。
+        READLINE_LINE=$(<"$tmp")
+        READLINE_POINT=${#READLINE_LINE}
+    fi
+
+    command rm -f -- "$tmp"
+}
+
 if [[ $- == *i* ]]; then
+    # Ctrl+X、Ctrl+E：只编辑，不自动执行（替换默认 edit-and-execute-command）。
+    bind -x '"\C-x\C-e": _edit_command_line'
+
     # 上下箭头按已输入前缀搜索历史（输入 git 后按 ↑ 只翻 git 开头的命令）
     bind '"\e[A": history-search-backward'
     bind '"\eOA": history-search-backward'

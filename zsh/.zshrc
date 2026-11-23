@@ -57,3 +57,19 @@ export PATH="$PATH:/Users/kcwen/.lmstudio/bin"
 # Local private config ~/.zshrc.local
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
+
+# cli command edit-command-line
+if command -v nvim >/dev/null 2>&1; then
+    export EDITOR=nvim
+else
+    export EDITOR=vim
+fi
+export VISUAL="$EDITOR"
+
+# edit: Ctrl+X - Ctrl+E
+autoload -Uz edit-command-line
+zle -N edit-command-line
+
+bindkey -M emacs '^X^E' edit-command-line
+bindkey -M viins '^X^E' edit-command-line
+
