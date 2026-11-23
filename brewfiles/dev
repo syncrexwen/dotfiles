@@ -69,10 +69,10 @@ brew "xmlstarlet"                # XML query, validation, and transformation too
 # ------------------------------------------------------------
 brew "pandoc"                    # Universal document converter.
 brew "poppler"                   # PDF utilities such as pdftotext and pdfinfo.
-brew "ffmpeg-full"                    # Audio/video processing toolkit.
+brew "ffmpeg-full"               # Audio/video processing toolkit.
 brew "yt-dlp"                    # Video/audio downloader.
 brew "webp"                      # Webp management.
-brew "imagemagick"               # Tools and libraries to manipulate images in select formats.
+brew "imagemagick-full"          # Tools and libraries to manipulate images in select formats.
 
 # ------------------------------------------------------------
 # Monitoring, Logs & System Inspection
