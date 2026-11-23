@@ -22,6 +22,7 @@ brew "chafa"                     # Versatile and fast Unicode/ASCII/ANSI graphic
 brew "qsv"                       # Ultra-fast CSV data-wrangling toolkit.
 brew "mlx-lm"                    # Run LLMs with MLX.
 brew "gnu-sed"                   # GNU implementation of the famous stream editor.
+brew "tealdeer"                  # Very fast implementation of tldr in Rust, a quick reference tool.
 
 # ------------------------------------------------------------
 # Language Runtimes & Package Management
