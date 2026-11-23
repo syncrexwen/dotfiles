@@ -2,7 +2,7 @@
   // ==========================================
   // Theme & Appearance
   // ==========================================
-  "workbench.colorTheme": "Flexoki Dark",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "material-icon-theme",
   "catppuccin-icons.associations.languages": {
     "typescriptreact": "typescript-react",
