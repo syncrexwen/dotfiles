@@ -9,7 +9,7 @@ mod_install() {
 
 mod_configure() {
   local rc=0
-  write_cfg "$MOD_DIR/starship.toml" "$CFG/starship.toml" || rc=1
+  write_cfg "$ROOT/../starship/.config/starship.toml" "$CFG/starship.toml"
   write_confd 50-starship.bash || rc=1
   return $rc
 }
