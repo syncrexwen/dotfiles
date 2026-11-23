@@ -70,7 +70,7 @@ cask "adobe-creative-cloud"      # Adobe Creative Cloud manager.
 # ------------------------------------------------------------
 # System Utilities
 # ------------------------------------------------------------
-cask "appcleaner"                # App uninstaller.
+cask "pearcleaner"               # Utility to uninstall apps and remove leftover files from old/uninstalled apps
 cask "battery-buddy"             # Battery menu bar utility.
 cask "keepingyouawake"           # Prevents macOS sleep.
 cask "mos"                       # Smooth scrolling and mouse wheel utility.
