@@ -32,3 +32,6 @@ verify*
 # local zshrc secret
 .zshrc.local
 
+# local scripts
+LOCALSCRIPT*
+
