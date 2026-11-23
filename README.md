@@ -111,9 +111,34 @@ chmod +x install_vscode_extensions.sh
 
 ## 服务器一键配置
 
+以下命令仅在 x86_64 Ubuntu 服务器上执行，需要 sudo 权限。以目标用户登录运行，
+不要在整个命令前加 sudo，否则用户配置会写入 root 的家目录。
+
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/SyncrexWen/dotfiles/main/remote/bootstrap.sh)
 ```
+
+默认 profile 包含 Neovim / LazyVim。仅安装 Neovim 及其依赖：
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/SyncrexWen/dotfiles/main/remote/bootstrap.sh) --only neovim
+source ~/.bashrc
+nvim
+```
+
+- Neovim 会复用满足 [LazyVim 要求](https://www.lazyvim.org/) 的现有版本（>= 0.11.2，带 LuaJIT），
+  否则下载官方 v0.12.6 Linux x86_64 tarball，安装到用户目录，不覆盖系统包。
+  官方二进制需要系统提供兼容的 glibc。
+- 同时安装 Git、C 编译工具、ripgrep、fd 和 tree-sitter CLI v0.27.2。
+- 配置使用官方 LazyVim starter。首次启动 `nvim` 时还需联网下载插件，完成后执行 `:LazyHealth`。
+  具体语言的 LSP / 格式化器可在 `:Mason` 中按需安装，部分工具还需要 Node.js 等语言运行时。
+- 已有 `~/.config/nvim` 时保留原配置；若要切换到 LazyVim，先自行备份移走原配置。
+  设置了 `XDG_CONFIG_HOME` 时使用该目录下的 `nvim`。重复安装不会覆盖已有配置或删除其 `.git`。
+- 通过 SSH 使用时，需要在 **Mac 客户端终端**安装并选择 Nerd Font；只在服务器安装字体不会改变
+  SSH 的显示，因此服务器安装流程不包含字体。
+
+curl 入口只下载 GitHub 上已推送的内容；本地未提交的修改不会被包含。
+测试其他分支时，应同时把入口 URL 中的 `main` 和环境变量 `DOTFILES_REF` 改为该分支名。
 
 ## 包含的配置
 
