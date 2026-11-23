@@ -18,6 +18,7 @@ cask "ghostty"                   # Terminal emulator that uses platform-native U
 cask "nikitabobko/tap/aerospace" # i3-like tiling window manager for macOS.
 cask "raycast"                   # Launcher and workflow automation.
 cask "thaw"                      # Menu bar manager.
+cask "marta"                     # Extensible two-pane file manager.
 
 # ------------------------------------------------------------
 # Browsers
