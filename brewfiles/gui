@@ -46,7 +46,7 @@ cask "skim"                      # PDF reader.
 # ------------------------------------------------------------
 # AI tools
 # ------------------------------------------------------------
-cask deepseek-harness            # Plugin-based AI agent desktop application.
+cask "deepseek-harness"            # Plugin-based AI agent desktop application.
 
 # ------------------------------------------------------------
 # Communication
