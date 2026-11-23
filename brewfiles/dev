@@ -80,6 +80,7 @@ brew "imagemagick-full"          # Tools and libraries to manipulate images in s
 brew "btop"                      # Interactive resource monitor.
 brew "htop"                      # Interactive process viewer.
 brew "lnav"                      # Log file navigator and analyzer.
+brew "yazi"                      # Blazing fast terminal file manager written in Rust, based on async I/O.
 
 # ------------------------------------------------------------
 # Utilities
